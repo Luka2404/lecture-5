@@ -5,11 +5,18 @@
 .lists {
     display: flex;
 }
+body{
+    padding-bottom: 100px;
+}
 .li-1 {
     font-family: 'Playfair Display', serif;
     font-family: 'Rowdies', cursive;
     margin-left: 50px;
     font-size: 23px;
+}
+.li-1:hover{
+    color: #bd5f3a;
+    text-shadow: 0 0 5px rgb(60, 255, 0);
 }
 .div-1{
     margin-top: 50px;
@@ -19,10 +26,11 @@
     height: 100px;
 }
 .background {
+
     background-image: url(../image/Fashion88.png);
     width: 100%;
     height: 380px;
-    margin-top: 30px;
+    margin-top: 100px;
     background-size: cover;
     position: absolute;
    
@@ -58,11 +66,8 @@
 }
 .div-3{
     width: 100%;
-   }
-.sec-3{
     display: flex;
-    width: 100%;
-}
+   }
 .sec-2{
     margin-left: 200px;
     margin-top: 100px;
@@ -74,4 +79,68 @@
 }
 .p-2{
     width: 60%;
+}
+.div-4{
+    display: flex;
+}
+
+
+/*button*/
+.button{
+    margin-top: 100px;
+    margin-left: 800px;
+    color: #ff5900;
+    font-size: 25px;
+    padding: 20px 50px;
+    border: 2px solid chocolate;
+    position: relative;
+
+}
+.button::before , .button::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: inherit;
+    transition: all .5s;
+}
+.button::before{
+    top: -15px;
+    left: -15px;
+    border-width: 3px 0 0 3px;
+}
+.button::after{
+    bottom: -15px;
+    right: -15px;
+    border-width: 0 3px 3px 0;
+}
+.button:hover{
+    background-color: #FF7A00;
+    color: black;
+}
+.button:hover::before , .button:hover::after{
+    width: calc(100% + 27px);
+    height: calc(100% + 27px) ;
+}
+
+.black{
+
+    background: linear-gradient(
+        to right, #833abd
+        red
+        yellow
+    );
+    background-size: 400% 400%;
+    animation: 10s infinite ease-in-out;
+
+}
+@keyframes animate-backgroun {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    100% {
+        background-position: 0 50%;
+    }
 }
